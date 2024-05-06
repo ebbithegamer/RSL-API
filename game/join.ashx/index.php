@@ -22,7 +22,7 @@ if true then
    local l = Instance.new("ImageLabel")
    m.Name = "AdGUI"
    l.BackgroundTransparency = 1
-   l.Image = "http://www.berafta.tk/asset/?id=23573247"
+   l.Image = "http://www.rbxs.5v.pl/asset/?id=23573247"
    l.Position = UDim2.new(.3,5,0,5)
    l.Size = UDim2.new(0,470,0,165)
    l.Parent = m
@@ -55,7 +55,7 @@ pcall(function() settings().Physics.PhysicsEnvironmentalThrottle = Enum.Envirome
  
 function reportContentProvider(time, queueLength, blocking)
 	pcall(function()
-		game:HttpGet("http://www.berafta.tk/Analytics/ContentProvider.ashx?t=" .. time .. "&ql=" .. queueLength, blocking)
+		game:HttpGet("http://www.rbxs.5v.pl/Analytics/ContentProvider.ashx?t=" .. time .. "&ql=" .. queueLength, blocking)
 	end)
 end
 function reportCdn(blocking)
@@ -67,7 +67,7 @@ function reportCdn(blocking)
 		cdnSuccess = newCdnSuccess
 		cdnFailure = newCdnFailure
 		if successDelta > 0 or failureDelta > 0 then
-			game:HttpGet("http://www.berafta.tk/Game/Cdn.ashx?source=client&success=" .. successDelta .. "&failure=" .. failureDelta, blocking)
+			game:HttpGet("http://www.rbxs.5v.pl/Game/Cdn.ashx?source=client&success=" .. successDelta .. "&failure=" .. failureDelta, blocking)
 		end
 	end)
 end
@@ -77,7 +77,7 @@ function reportDuration(category, result, duration, blocking,errorType)
 		errorType = ''
 	end
 	local platform = settings().Diagnostics.OsPlatform
-	pcall(function() game:HttpGet("http://www.berafta.tk/Game/JoinRate.ashx?st=0&i=0&p=-1&c=" .. category .. "&r=" .. result .. "&d=" .. (math.floor(duration*1000)) .. "&ip=localhost&errorType=" .. errorType .. "&platform=" .. platform, blocking) end)
+	pcall(function() game:HttpGet("http://www.rbxs.5v.pl/Game/JoinRate.ashx?st=0&i=0&p=-1&c=" .. category .. "&r=" .. result .. "&d=" .. (math.floor(duration*1000)) .. "&ip=localhost&errorType=" .. errorType .. "&platform=" .. platform, blocking) end)
 end
 -- arguments ---------------------------------------
 local threadSleepTime = ...
@@ -112,18 +112,18 @@ end)
  
 game:GetService("ChangeHistoryService"):SetEnabled(false)
 game:GetService("ContentProvider"):SetThreadPool(16)
-game:GetService("InsertService"):SetBaseSetsUrl("http://www.berafta.tk/Game/Tools/InsertAsset.ashx?nsets=10&type=base")
-game:GetService("InsertService"):SetUserSetsUrl("http://www.berafta.tk/Game/Tools/InsertAsset.ashx?nsets=20&type=user&userid=%d")
-game:GetService("InsertService"):SetCollectionUrl("http://www.berafta.tk/Game/Tools/InsertAsset.ashx?sid=%d")
-game:GetService("InsertService"):SetAssetUrl("http://www.berafta.tk/Asset/?id=%d")
-game:GetService("InsertService"):SetAssetVersionUrl("http://www.berafta.tk/Asset/?assetversionid=%d")
+game:GetService("InsertService"):SetBaseSetsUrl("http://www.rbxs.5v.pl/Game/Tools/InsertAsset.ashx?nsets=10&type=base")
+game:GetService("InsertService"):SetUserSetsUrl("http://www.rbxs.5v.pl/Game/Tools/InsertAsset.ashx?nsets=20&type=user&userid=%d")
+game:GetService("InsertService"):SetCollectionUrl("http://www.rbxs.5v.pl/Game/Tools/InsertAsset.ashx?sid=%d")
+game:GetService("InsertService"):SetAssetUrl("http://www.rbxs.5v.pl/Asset/?id=%d")
+game:GetService("InsertService"):SetAssetVersionUrl("http://www.rbxs.5v.pl/Asset/?assetversionid=%d")
  
-pcall(function() game:GetService("SocialService"):SetFriendUrl("http://www.berafta.tk/Game/LuaWebService/HandleSocialRequest.ashx?method=IsFriendsWith&playerid=%d&userid=%d") end)
-pcall(function() game:GetService("SocialService"):SetBestFriendUrl("http://www.berafta.tk/Game/LuaWebService/HandleSocialRequest.ashx?method=IsBestFriendsWith&playerid=%d&userid=%d") end)
-pcall(function() game:GetService("SocialService"):SetGroupUrl("http://www.berafta.tk/Game/LuaWebService/HandleSocialRequest.ashx?method=IsInGroup&playerid=%d&groupid=%d") end)
-pcall(function() game:GetService("SocialService"):SetGroupRankUrl("http://www.berafta.tk/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRank&playerid=%d&groupid=%d") end)
-pcall(function() game:GetService("SocialService"):SetGroupRoleUrl("http://www.berafta.tk/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&playerid=%d&groupid=%d") end)
-pcall(function() game:GetService("GamePassService"):SetPlayerHasPassUrl("http://www.berafta.tk/Game/GamePass/GamePassHandler.ashx?Action=HasPass&UserID=%d&PassID=%d") end)
+pcall(function() game:GetService("SocialService"):SetFriendUrl("http://www.rbxs.5v.pl/Game/LuaWebService/HandleSocialRequest.ashx?method=IsFriendsWith&playerid=%d&userid=%d") end)
+pcall(function() game:GetService("SocialService"):SetBestFriendUrl("http://www.rbxs.5v.pl/Game/LuaWebService/HandleSocialRequest.ashx?method=IsBestFriendsWith&playerid=%d&userid=%d") end)
+pcall(function() game:GetService("SocialService"):SetGroupUrl("http://www.rbxs.5v.pl/Game/LuaWebService/HandleSocialRequest.ashx?method=IsInGroup&playerid=%d&groupid=%d") end)
+pcall(function() game:GetService("SocialService"):SetGroupRankUrl("http://www.rbxs.5v.pl/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRank&playerid=%d&groupid=%d") end)
+pcall(function() game:GetService("SocialService"):SetGroupRoleUrl("http://www.rbxs.5v.pl/Game/LuaWebService/HandleSocialRequest.ashx?method=GetGroupRole&playerid=%d&groupid=%d") end)
+pcall(function() game:GetService("GamePassService"):SetPlayerHasPassUrl("http://www.rbxs.5v.pl/Game/GamePass/GamePassHandler.ashx?Action=HasPass&UserID=%d&PassID=%d") end)
  
 --local result = pcall(function() game:GetService("ScriptContext"):AddStarterScript(37801172) end)
 --if not result then
@@ -413,7 +413,7 @@ if 0 then
 end
  
 pcall(function() game:SetScreenshotInfo("") end)
-pcall(function() game:SetVideoInfo('<?xml version="1.0"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:yt="http://gdata.youtube.com/schemas/2007"><media:group><media:title type="plain"><![CDATA[ROBLOX Place]]></media:title><media:description type="plain"><![CDATA[ For more games visit http://www.berafta.tk]]></media:description><media:category scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Games</media:category><media:keywords>ROBLOX, video, free game, online virtual world</media:keywords></media:group></entry>') end)
+pcall(function() game:SetVideoInfo('<?xml version="1.0"?><entry xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xmlns:yt="http://gdata.youtube.com/schemas/2007"><media:group><media:title type="plain"><![CDATA[ROBLOX Place]]></media:title><media:description type="plain"><![CDATA[ For more games visit http://www.rbxs.5v.pl]]></media:description><media:category scheme="http://gdata.youtube.com/schemas/2007/categories.cat">Games</media:category><media:keywords>ROBLOX, video, free game, online virtual world</media:keywords></media:group></entry>') end)
 -- use single quotes here because the video info string may have unescaped double quotes
  
 analytics("Join Finished")
@@ -421,7 +421,7 @@ analytics("Join Finished")
 ifSeleniumThenSetCookie("SeleniumTest4", "Finished join")
 <?php
 $data = "\r\n" . ob_get_clean();
-$key = file_get_contents($_SERVER['DOCUMENT_ROOT']."/private/keys/PrivateKey.pem");
+$key = file_get_contents($_SERVER['DOCUMENT_ROOT']."/services/game/PrivateKey.pem");
 openssl_sign($data, $sig, $key, OPENSSL_ALGO_SHA1);
 echo "%" . base64_encode($sig) . "%" . $data;
 ?>
