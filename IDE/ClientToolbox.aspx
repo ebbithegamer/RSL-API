@@ -209,6 +209,7 @@ Roblox.Endpoints.Urls['/groups/can-manage-games'] = 'http://web.archive.org/web/
 
         </div>
         <div roblox-toolbox-assets class="client-toolbox-content">
+            <center>Toolbox assets coming soon!</center>
         </div>
 
         <div roblox-toolbox-pagination class="client-toolbox-subnav">
