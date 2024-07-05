@@ -3,7 +3,7 @@ function GetGamePort() {
     do {
         $num = mt_rand(1,100);
     }
-    while(in_array($num, array(1, 27, 32, 41, 56, 64, 74, 83, 90)));
+    while(in_array($num, array(1, 27, 32, 41, 56, 64, 74, 83, 90, 100)));
     echo $num;
 }
 echo GetGamePort();
